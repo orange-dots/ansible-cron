@@ -1,0 +1,16 @@
+---
+
+- hosts: testhosts
+  user: ansibleuser
+  become: yes
+  connection: ssh
+  gather_facts: yes
+
+  roles:
+    - cron
+
+  vars:
+    cron_tasks:
+      - name: Croncheck
+        special_time: daily
+        job: ls -alh >> /dev/null

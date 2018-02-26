@@ -1,0 +1,10 @@
+---
+
+- include: install.yml
+  tags: ['system', 'install', 'cron', 'cron-install']
+
+- include: config.yml
+  tags: ['system', 'config', 'cron', 'cron-config']
+
+- include: service.yml
+  tags: ['system', 'service', 'cron', 'cron-service']

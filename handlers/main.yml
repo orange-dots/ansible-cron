@@ -1,0 +1,26 @@
+---
+
+- name: start cron
+  service:
+    name: "{{ cron_service_name }}"
+    state: started
+
+- name: stop cron
+  service:
+    name: "{{ cron_service_name}}"
+    state: stopped
+
+- name: restart cron
+  service:
+    name: "{{ cron_service_name }}"
+    state: restarted
+  when: cron_service_state != 'stopped'
+
+- name: reload cron
+  service:
+    name: "{{ cron_service_name }}"
+    state: reloaded
+
+
+
+

@@ -1,0 +1,12 @@
+---
+
+# list of cron jobs
+cron_tasks: []
+
+# start on boot
+cron_service_enabled: yes
+
+# cron current state: 'started' | 'stopped'
+cron_service_state: started
+
+cron_vars: []

@@ -1,0 +1,7 @@
+---
+
+# package (version)
+cron_packages: cron
+
+# cron service name
+cron_service_name: cron
